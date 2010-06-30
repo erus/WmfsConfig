@@ -1,0 +1,26 @@
+# wmfsrc coloration
+#
+
+#syntax "wmfsrc" "wmfsrc[^/]*$"
+syntax "wmfsrc" "wmfsrc*$"
+
+# variable name & value
+icolor cyan start="=" end="$"
+icolor magenta start="(^|[[:space:]])[0-9a-z-]" end="="
+
+# string
+icolor cyan ""(\\.|[^"])*""
+
+# bracket/parenthesis
+#icolor brightred "(^|[[:space:]])((\[|\()[0-9a-z_!@#$%^&*-]+(\]|\)))"
+icolor brightred "(^|[[:space:]])((\[|\()[0-9a-z_!@#$%^&*-\/]+(\]|\)))"
+
+# number
+color green "[[:space:]][0-9.KM]+"
+
+# true/false
+color brightgreen "(true|false)"
+
+# comment
+color yellow start="(^|[[:space:]])(#).*$" end="$"
+color brightyellow "(^|[[:space:]])(#)"
