@@ -1,0 +1,13 @@
+#${if_mpd_playing}MPD: ${mpd_smart 30} | ${endif}\
+update_interval 1
+TEXT
+Majs: ${tail /tmp/.pac 1} | \
+Mails: ${tail /tmp/.mails 1} | \
+IP: ${tail /tmp/.ip 1} | \
+${if_up wlan0}WiFi: ${wireless_essid wlan0} - ${wireless_link_qual_perc wlan0}% | ${endif}\
+${if_mixer_mute}Vol: M${else}Vol: ${exec amixer get Master | awk 'NR==5 {gsub(/\[|\]/, ""); 1; print $4}'}${endif} | \
+${if_empty ${exec echo $DISPLAY}}${else}Gpu: ${exec /home/erus/.scripts/tempcg}° | ${endif}\
+Cpu: $cpu% - ${exec sensors | grep 0: | cut -c15-16}° | Serv: ${exec ssh compaq "sensors | grep Core0 | cut -c 15-16"}° | \
+Ram: $mem | \
+Bat: ${if_match ${battery_short BAT1}==U}D ${exec echo `cut -c 1-4 /sys/class/power_supply/BAT1/charge_now`/32 | bc}%${else}${battery_short BAT1}${endif} | \
+Up: $uptime_short - ${time %a %d %b %Y - %H:%M:%S}
