@@ -1,0 +1,40 @@
+[rules]
+       [rule]
+           instance = "vdpau"
+           class    = "MPlayer"
+           free     = true
+       [/rule]
+       [rule]
+           instance = "bashrun"
+           class    = "XTerm"
+           free     = true
+       [/rule]
+       [rule]
+           instance = "Navigator"
+           role     = "browser"
+           screen   = 1
+           tag      = 2
+       [/rule]
+#       [rule]
+#           instance = "spotify.exe"
+#           role     = "Wine"
+#           screen   = 1
+#           tag      = 5
+#           max      = true
+#       [/rule]
+       [rule]
+           instance = "vlc"
+           class    = "Vlc"
+           role     = "vlc-video"
+           free     = true
+       [/rule]
+       [rule]
+           instance = "xcalc"
+           class    = "XCalc"
+           free     = true
+       [/rule]
+       [rule]
+           class    = "glxgears"
+           free     = true
+       [/rule]
+[/rules]

@@ -1,0 +1,84 @@
+[tags]
+    tag_round   = false
+
+    name_count  = true
+
+    occupied_bg = "#4f4f4f"
+
+    sel_fg      = "#bebebe"
+    sel_bg      = "#1f1f1f"
+
+    urgent_fg   = "#ff6f6f"
+    urgent_bg   = "#4f4f4f"
+
+    border      = false
+
+    autohide    = false
+
+    [tag]
+        screen = 1
+        name   = "1"
+        layout = "tile_grid_vertical"
+    [/tag]
+    [tag]
+        screen = 1
+        name   = "2"
+        mwfact = 0.90
+        layout = "tile_bottom"
+    [/tag]
+    [tag]
+        screen = 1
+        name   = "3"
+        layout = "tile_grid_vertical"
+    [/tag]
+    [tag]
+        screen = 1
+        name   = "4"
+        layout = "tile_grid_vertical"
+    [/tag]
+    [tag]
+        screen = 1
+        name   = "5"
+        layout = "tile_grid_vertical"
+    [/tag]
+    [tag]
+        screen = 1
+        name   = "6"
+        layout = "tile_grid_vertical"
+    [/tag]
+    [tag]
+        screen     = 1
+        name       = "7"
+        resizehint = true
+        layout     = "free"
+    [/tag]
+    [tag]
+        screen = 1
+        name   = "8"
+        mwfact = 0.85
+        layout = "mirror_vertical"
+    [/tag]
+    [tag]
+        screen           = 1
+        name             = "9"
+        infobar_position = "hide"
+        layout           = "max"
+    [/tag]
+
+    [tag]
+        screen           = 0
+        name             = "1"
+        infobar_position = "hide"
+        layout           = "max"
+    [/tag]
+    [tag]
+        screen = 0
+        name   = "2"
+        layout = "tile_grid_vertical"
+    [/tag]
+    [tag]
+        screen = 0
+        name   = "3"
+        layout = "tile_grid_vertical"
+    [/tag]
+[/tags]

@@ -3,7 +3,7 @@
     raisefocus         = false
     focus_follow_mouse = true
     status_timing      = 1
-    status_path        = "/home/erus/.config/wmfs/status.sh"
+    status_path        = "~/.config/wmfs/status.sh"
     pad                = 8
 [/misc]
 [bar]
@@ -20,7 +20,7 @@
     [selbar]
         bg         = "#3f3f3f"
         fg         = "#bebebe"
-        max_lenght = "35"
+        max_length = "35"
 
         [mouse]
             button = "3"
@@ -47,104 +47,23 @@
 
     keep_layout_geo        = true
 
+    layout_button_width    = 24
+
     selected_layout_symbol = "·"
 
-    [layout] type = "tile"               symbol = "  \i[9;5;9;7;/home/erus/.config/wmfs/wh/tr.png]\  "  [/layout]
-    [layout] type = "tile_left"          symbol = "  \i[9;5;9;7;/home/erus/.config/wmfs/wh/tl.png]\  "  [/layout]
-    [layout] type = "tile_top"           symbol = "  \i[9;5;9;7;/home/erus/.config/wmfs/wh/tt.png]\  "  [/layout]
-    [layout] type = "tile_bottom"        symbol = "  \i[9;5;9;7;/home/erus/.config/wmfs/wh/tb.png]\  "  [/layout]
-    [layout] type = "tile_grid_vertical" symbol = "  \i[9;5;9;7;/home/erus/.config/wmfs/wh/tg.png]\  "  [/layout]
-    [layout] type = "mirror_vertical"    symbol = "  \i[9;5;9;7;/home/erus/.config/wmfs/wh/mv.png]\  "  [/layout]
-    [layout] type = "mirror_horizontal"  symbol = "  \i[9;5;9;7;/home/erus/.config/wmfs/wh/mh.png]\  "  [/layout]
-    [layout] type = "max"                symbol = "  \i[9;5;9;7;/home/erus/.config/wmfs/wh/max.png]\  " [/layout]
-    [layout] type = "free"               symbol = "  \i[9;5;9;7;/home/erus/.config/wmfs/wh/fr.png]\  "  [/layout]
+    [layout] type = "tile"               symbol = "\i[9;5;9;7;~/.config/wmfs/wh/tr.png]\"  [/layout]
+    [layout] type = "tile_left"          symbol = "\i[9;5;9;7;~/.config/wmfs/wh/tl.png]\"  [/layout]
+    [layout] type = "tile_top"           symbol = "\i[9;5;9;7;~/.config/wmfs/wh/tt.png]\"  [/layout]
+    [layout] type = "tile_bottom"        symbol = "\i[9;5;9;7;~/.config/wmfs/wh/tb.png]\"  [/layout]
+    [layout] type = "tile_grid_vertical" symbol = "\i[9;5;9;7;~/.config/wmfs/wh/tg.png]\"  [/layout]
+    [layout] type = "mirror_vertical"    symbol = "\i[9;5;9;7;~/.config/wmfs/wh/mv.png]\"  [/layout]
+    [layout] type = "mirror_horizontal"  symbol = "\i[9;5;9;7;~/.config/wmfs/wh/mh.png]\"  [/layout]
+    [layout] type = "max"                symbol = "\i[9;5;9;7;~/.config/wmfs/wh/mx.png]\"  [/layout]
+    [layout] type = "free"               symbol = "\i[9;5;9;7;~/.config/wmfs/wh/fr.png]\"  [/layout]
 [/layouts]
-[tags]
-    tag_round   = false
-
-    name_count  = true
-
-    occupied_bg = "#4f4f4f"
-
-    sel_fg      = "#bebebe"
-    sel_bg      = "#1f1f1f"
-
-    urgent_fg   = "#ff6f6f"
-    urgent_bg   = "#4f4f4f"
-
-    border      = false
-
-    autohide    = false
-
-    [tag]
-        screen = 1
-        name   = "1"
-        layout = "tile_grid_vertical"
-    [/tag]
-    [tag]
-        screen = 1
-        name   = "2"
-        mwfact = 0.10
-        layout = "tile_top"
-    [/tag]
-    [tag]
-        screen = 1
-        name   = "3"
-        layout = "tile_grid_vertical"
-    [/tag]
-    [tag]
-        screen = 1
-        name   = "4"
-        layout = "tile_grid_vertical"
-    [/tag]
-    [tag]
-        screen = 1
-        name   = "5"
-        layout = "tile_grid_vertical"
-    [/tag]
-    [tag]
-        screen = 1
-        name   = "6"
-        layout = "tile_grid_vertical"
-    [/tag]
-    [tag]
-        screen     = 1
-        name       = "7"
-        resizehint = true
-        layout     = "free"
-    [/tag]
-    [tag]
-        screen = 1
-        name   = "8"
-        mwfact = 0.85
-        layout = "mirror_vertical"
-    [/tag]
-    [tag]
-        screen           = 1
-        name             = "9"
-        infobar_position = "hide"
-        layout           = "max"
-    [/tag]
-
-    [tag]
-        screen           = 0
-        name             = "1"
-        infobar_position = "hide"
-        layout           = "max"
-    [/tag]
-    [tag]
-        screen = 0
-        name   = "2"
-        layout = "tile_grid_vertical"
-    [/tag]
-    [tag]
-        screen = 0
-        name   = "3"
-        layout = "tile_grid_vertical"
-    [/tag]
-[/tags]
+@include "~/.config/wmfs/includes/tags.wmfsrc"
 [root]
-    background_command = "/home/erus/.config/wmfs/autorun.sh"
+    background_command = "~/.config/wmfs/autorun.sh"
 
     [mouse]
         button = "4"
@@ -171,7 +90,7 @@
     border_focus         = "#3F3F3F"
     resize_corner_normal = "#333333"
     resize_corner_focus  = "#3F3F3F"
-    set_new_win_master   = true
+    set_new_win_master   = false
     modifier             = "Mod4"
 
     [mouse]
@@ -192,46 +111,7 @@
     [/mouse]
 
 [/client]
-[rules]
-       [rule]
-           instance = "vdpau"
-           class    = "MPlayer"
-           free     = true
-       [/rule]
-       [rule]
-           instance = "bashrun"
-           class    = "XTerm"
-           free     = true
-       [/rule]
-       [rule]
-           instance = "Navigator"
-           role     = "browser"
-           screen   = 1
-           tag      = 2
-       [/rule]
-       [rule]
-           instance = "spotify.exe"
-           role     = "Wine"
-           screen   = 1
-           tag      = 5
-           max      = true
-       [/rule]
-       [rule]
-           instance = "vlc"
-           class    = "Vlc"
-           role     = "vlc-video"
-           free     = true
-       [/rule]
-       [rule]
-           instance = "xcalc"
-           class    = "XCalc"
-           free     = true
-       [/rule]
-       [rule]
-           class    = "glxgears"
-           free     = true
-       [/rule]
-[/rules]
+@include "~/.config/wmfs/includes/rules.wmfsrc"
 [menu]
     [set_menu]
         name      = "rootmenu"
@@ -275,85 +155,4 @@
         command = "exec urxvtc -e ssh"
     [/set_launcher]
 [/launcher]
-[keys]
-    #fonction "generales" de wmfs
-    [key] mod = { "Mod4", "Control" } key = "q"                    func = "client_kill"                                               [/key]
-    [key] mod = { "Mod4", "Alt" }     key = "BackSpace"            func = "quit"                                                      [/key]
-    [key] mod = { "Mod4" }            key = "f"                    func = "toggle_max"                                                [/key]
-    [key] mod = { "Mod4" }            key = "v"                    func = "toggle_free"                                               [/key]
-    [key] mod = { "Alt", "Control" }  key = "r"                    func = "reload"                                                    [/key]
-    [key] mod = { "Mod4" }            key = "b"                    func = "toggle_resizehint"                                         [/key]
-    [key] mod = { "Mod4" }            key = "h"                    func = "toggle_tagautohide"                                        [/key]
-    [key] mod = { "Mod4", "Alt" }     key = "space"                func = "toggle_infobar_position"                                   [/key]
-    #focus
-    [key] mod = { "Mod4" }            key = "Right"                func = "client_next"                                               [/key]
-    [key] mod = { "Mod4" }            key = "Left"                 func = "client_prev"                                               [/key]
-    [key] mod = { "Mod4", "Alt" }     key = "Right"                func = "screen_next"                                               [/key]
-    [key] mod = { "Mod4", "Alt" }     key = "Left"                 func = "screen_prev"                                               [/key]
-    [key] mod = { "Mod4" }            key = "x"                    func = "screen_prev_sel"                                           [/key]
-    #deplacer
-    [key] mod = { "Mod4" , "Shift" }  key = "Right"                func = "client_screen_next"                                        [/key]
-    [key] mod = { "Mod4" , "Shift" }  key = "Left"                 func = "client_screen_prev"                                        [/key]
-    [key] mod = { "Control" }         key = "Right"                func = "client_swap_next"                                          [/key]
-    [key] mod = { "Control" }         key = "Left"                 func = "client_swap_prev"                                          [/key]
-    #action sur le "bureau virtuel
-    [key] mod = { "Mod4" }            key = "Tab"                  func = "tag_next"                                                  [/key]
-    [key] mod = { "Mod4", "Shift" }   key = "Tab"                  func = "tag_prev"                                                  [/key]
-    [key] mod = { "Mod4" }            key = "c"                    func = "tag_prev_sel"                                              [/key]
-    [key] mod = { "Mod4" }            key = "w"                    func = "tag_urgent"                                                [/key]
-    [key] mod = { "Mod4" }            key = "space"                func = "layout_next"                                               [/key]
-    [key] mod = { "Mod4", "Shift" }   key = "space"                func = "layout_prev"                                               [/key]
-    #action sur la fenetre principale
-    [key] mod = { "Control", "Alt" }  key = "Right"                func = "set_mwfact"       cmd = "+0.025"                           [/key]
-    [key] mod = { "Control", "Alt" }  key = "Left"                 func = "set_mwfact"       cmd = "-0.025"                           [/key]
-    [key] mod = { "Control", "Alt" }  key = "Up"                   func = "set_nmaster"      cmd = "+1"                               [/key]
-    [key] mod = { "Control", "Alt" }  key = "Down"                 func = "set_nmaster"      cmd = "-1"                               [/key]
-    #Launcher
-    [key] mod = { "Mod4" }            key = "a"                    func = "menu"             cmd = "rootmenu"                         [/key]
-#   [key] mod = { "Mod4" }            key = "r"                    func = "launcher"         cmd = "launcher_exec"                    [/key]
-    [key] mod = { "Mod4" }            key = "r"                    func = "spawn"            cmd = "bashrun"                          [/key]
-    [key] mod = { "Mod4" }            key = "p"                    func = "launcher"         cmd = "launcher_term"                    [/key]
-#   [key] mod = { "Mod4" }            key = "s"                    func = "launcher"         cmd = "launcher_ssh"                     [/key]
-    [key] mod = { "Mod4" }            key = "s"                    func = "spawn"            cmd = "urxvtc -T Irc -e ssh erus@compaq" [/key]
-    #MPD control
-    [key]                             key = "XF86AudioPlay"        func = "spawn"            cmd = "mpc -q toggle"                    [/key]
-    [key]                             key = "XF86AudioStop"        func = "spawn"            cmd = "mpc -q stop"                      [/key]
-    [key]                             key = "XF86AudioNext"        func = "spawn"            cmd = "mpc -q next"                      [/key]
-    [key]                             key = "XF86AudioPrev"        func = "spawn"            cmd = "mpc -q prev"                      [/key]
-    #Volume control
-    [key]                             key = "XF86AudioMute"        func = "spawn"            cmd = "mute"                             [/key]
-    [key]                             key = "XF86AudioLowerVolume" func = "spawn"            cmd = "aumix -v -2"                      [/key]
-    [key]                             key = "XF86AudioRaiseVolume" func = "spawn"            cmd = "aumix -v +2"                      [/key]
-    [key] mod = { "Mod4" }            key = "twosuperior"          func = "spawn"            cmd = "aumix -v 35"                      [/key]
-    #programmes
-    [key]                             key = "Print"                func = "spawn"            cmd = "koin.sh"                          [/key]
-    [key] mod = { "Mod4" }            key = "Return"               func = "spawn"            cmd = "urxvtc"                           [/key]
-    [key] mod = { "Mod4" }            key = "n"                    func = "spawn"            cmd = "firefox"                          [/key]
-    [key] mod = { "Mod4" }            key = "m"                    func = "spawn"            cmd = "urxvtc -T music -e ncmpcpp"       [/key]
-    [key] mod = { "Mod4" }            key = "l"                    func = "spawn"            cmd = "lockscreen.sh"                    [/key]
-    [key]                             key = "XF86Standby"          func = "spawn"            cmd = "lockscreen.sh && sudo pm-suspend" [/key] 
-    [key]                             key = "XF86Sleep"            func = "spawn"            cmd = "lockscreen.sh && sudo pm-suspend" [/key] 
-    # Set the screen x.
-    [key] mod = { "Mod4", "Alt" }     key = "ampersand"            func = "screen_select"    cmd = "1"                                [/key]
-    [key] mod = { "Mod4", "Alt" }     key = "eacute"               func = "screen_select"    cmd = "2"                                [/key]
-    # Set the tag x.
-    [key] mod = { "Mod4" }            key = "ampersand"            func = "tag"              cmd = "1"                                [/key]
-    [key] mod = { "Mod4" }            key = "eacute"               func = "tag"              cmd = "2"                                [/key]
-    [key] mod = { "Mod4" }            key = "quotedbl"             func = "tag"              cmd = "3"                                [/key]
-    [key] mod = { "Mod4" }            key = "apostrophe"           func = "tag"              cmd = "4"                                [/key]
-    [key] mod = { "Mod4" }            key = "parenleft"            func = "tag"              cmd = "5"                                [/key]
-    [key] mod = { "Mod4" }            key = "minus"                func = "tag"              cmd = "6"                                [/key]
-    [key] mod = { "Mod4" }            key = "egrave"               func = "tag"              cmd = "7"                                [/key]
-    [key] mod = { "Mod4" }            key = "underscore"           func = "tag"              cmd = "8"                                [/key]
-    [key] mod = { "Mod4" }            key = "ccedilla"             func = "tag"              cmd = "9"                                [/key]
-    # Transfert selected client to x.
-    [key] mod = { "Mod4", "Shift" }   key = "ampersand"            func = "tag_transfert"    cmd ="1"                                 [/key]
-    [key] mod = { "Mod4", "Shift" }   key = "eacute"               func = "tag_transfert"    cmd ="2"                                 [/key]
-    [key] mod = { "Mod4", "Shift" }   key = "quotedbl"             func = "tag_transfert"    cmd ="3"                                 [/key]
-    [key] mod = { "Mod4", "Shift" }   key = "apostrophe"           func = "tag_transfert"    cmd ="4"                                 [/key]
-    [key] mod = { "Mod4", "Shift" }   key = "parenleft"            func = "tag_transfert"    cmd ="5"                                 [/key]
-    [key] mod = { "Mod4", "Shift" }   key = "minus"                func = "tag_transfert"    cmd ="6"                                 [/key]
-    [key] mod = { "Mod4", "Shift" }   key = "egrave"               func = "tag_transfert"    cmd ="7"                                 [/key]
-    [key] mod = { "Mod4", "Shift" }   key = "underscore"           func = "tag_transfert"    cmd ="8"                                 [/key]
-    [key] mod = { "Mod4", "Shift" }   key = "ccedilla"             func = "tag_transfert"    cmd ="9"                                 [/key]
-[/keys]
+@include "~/.config/wmfs/includes/keys.wmfsrc"
