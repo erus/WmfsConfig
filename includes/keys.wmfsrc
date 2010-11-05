@@ -1,6 +1,7 @@
 [keys]
     #fonction "generales" de wmfs
     [key] mod = { "Mod4", "Control" } key = "q"                    func = "client_kill"                                               [/key]
+    [key] mod = { "Mod4" }            key = "i"                    func = "client_ignore_tag"                                         [/key]
     [key] mod = { "Mod4", "Alt" }     key = "BackSpace"            func = "quit"                                                      [/key]
     [key] mod = { "Mod4" }            key = "f"                    func = "toggle_max"                                                [/key]
     [key] mod = { "Mod4" }            key = "v"                    func = "toggle_free"                                               [/key]
@@ -33,11 +34,11 @@
     [key] mod = { "Control", "Alt" }  key = "Down"                 func = "set_nmaster"      cmd = "-1"                               [/key]
     #Launcher
     [key] mod = { "Mod4" }            key = "a"                    func = "menu"             cmd = "rootmenu"                         [/key]
-#   [key] mod = { "Mod4" }            key = "r"                    func = "launcher"         cmd = "launcher_exec"                    [/key]
-    [key] mod = { "Mod4" }            key = "r"                    func = "spawn"            cmd = "bashrun"                          [/key]
+    [key] mod = { "Mod4" }            key = "r"                    func = "launcher"         cmd = "launcher_exec"                    [/key]
+#   [key] mod = { "Mod4" }            key = "r"                    func = "spawn"            cmd = "bashrun"                          [/key]
     [key] mod = { "Mod4" }            key = "p"                    func = "launcher"         cmd = "launcher_term"                    [/key]
-#   [key] mod = { "Mod4" }            key = "s"                    func = "launcher"         cmd = "launcher_ssh"                     [/key]
-    [key] mod = { "Mod4" }            key = "s"                    func = "spawn"            cmd = "urxvtc -T Irc -e ssh erus@compaq" [/key]
+    [key] mod = { "Mod4" }            key = "s"                    func = "launcher"         cmd = "launcher_ssh"                     [/key]
+#   [key] mod = { "Mod4" }            key = "s"                    func = "spawn"            cmd = "urxvtc -T Irc -e ssh foo@bar"     [/key]
     #MPD control
     [key]                             key = "XF86AudioPlay"        func = "spawn"            cmd = "mpc -q toggle"                    [/key]
     [key]                             key = "XF86AudioStop"        func = "spawn"            cmd = "mpc -q stop"                      [/key]

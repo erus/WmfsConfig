@@ -20,7 +20,7 @@
     [selbar]
         bg         = "#3f3f3f"
         fg         = "#bebebe"
-        max_length = "35"
+        max_length = 40
 
         [mouse]
             button = "3"

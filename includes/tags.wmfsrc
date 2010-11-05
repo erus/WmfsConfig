@@ -4,6 +4,7 @@
     name_count  = true
 
     occupied_bg = "#4f4f4f"
+    occupied_fg = "#bebebe"
 
     sel_fg      = "#bebebe"
     sel_bg      = "#1f1f1f"

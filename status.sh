@@ -1,3 +1,3 @@
 #!/bin/dash
 [ -e /tmp/.conk ] || wmfs -c reload &
-wmfs -s 0 "`tail -n 1 /tmp/.conk | /home/erus/.config/wmfs/wrapper.sh`"
+wmfs -s "`tail -n 1 /tmp/.conk | ~/.config/wmfs/wrapper.sh`"

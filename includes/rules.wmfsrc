@@ -1,20 +1,4 @@
 [rules]
-       [rule]
-           instance = "vdpau"
-           class    = "MPlayer"
-           free     = true
-       [/rule]
-       [rule]
-           instance = "bashrun"
-           class    = "XTerm"
-           free     = true
-       [/rule]
-       [rule]
-           instance = "Navigator"
-           role     = "browser"
-           screen   = 1
-           tag      = 2
-       [/rule]
 #       [rule]
 #           instance = "spotify.exe"
 #           role     = "Wine"
@@ -23,9 +7,43 @@
 #           max      = true
 #       [/rule]
        [rule]
+           instance = "Navigator"
+           role     = "browser"
+           screen   = 1
+           tag      = 2
+       [/rule]
+       [rule]
+           instance = "vdpau"
+           class    = "MPlayer"
+           screen   = 1
+           free     = true
+       [/rule]
+       [rule]
            instance = "vlc"
            class    = "Vlc"
            role     = "vlc-video"
+           screen   = 1
+           free     = true
+       [/rule]
+       [rule]
+           instance = "VisualBoyAdvance"
+           class    = "VisualBoyAdvance"
+           screen   = 1
+           free     = true
+       [/rule]
+       [rule]
+           instance = "bashrun"
+           class    = "XTerm"
+           free     = true
+       [/rule]
+       [rule]
+           instance = "xmessage"
+           class    = "Xmessage"
+           free     = true
+       [/rule]
+       [rule]
+           instance = "feh"
+           class    = "feh"
            free     = true
        [/rule]
        [rule]

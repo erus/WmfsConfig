@@ -1,13 +1,13 @@
 #${if_mpd_playing}MPD: ${mpd_smart 30} | ${endif}\
+#IP: ${tail /tmp/.ip 1} | \
 update_interval 1
 TEXT
+${execi 20 ~/.config/wmfs/updates_pacman.sh > /dev/null 2>&1}
 Majs: ${tail /tmp/.pac 1} | \
 Mails: ${tail /tmp/.mails 1} | \
-IP: ${tail /tmp/.ip 1} | \
 ${if_up wlan0}WiFi: ${wireless_essid wlan0} - ${wireless_link_qual_perc wlan0}% | ${endif}\
-Vol: ${if_mixer_mute}M${else}${exec amixer get Master | awk 'NR==5 {gsub(/\[|\]/, ""); 1; print $4}'}${endif} | \
-${if_empty ${exec echo $DISPLAY}}${else}Gpu: ${exec /home/erus/.scripts/tempcg}° | ${endif}\
-Cpu: $cpu% - ${exec sensors | grep 0: | cut -c15-16}° | Serv: ${exec ssh compaq "sensors | grep Core0 | cut -c 15-16"}° | \
+Vol: ${if_mixer_mute}M${else}${exec amixer get Master | sed -n 's|.*\[\([0-9]*\)\%.*|\1%|pg'}${endif} | \
+Cpu: $cpu% - ${exec sensors | sed -n 's/.*ore.*0.*+\(.*\)..°C.*(.*/\1°/pg'} | | \
 Ram: $mem | \
-Bat: ${execi 2 /home/erus/.scripts/battery_short.sh} | \
+Bat: ${execi 2 ~/.scripts/battery_short.sh} | \
 Up: $uptime_short - ${time %a %d %b %Y - %H:%M:%S}
