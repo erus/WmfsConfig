@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 feh --bg-center yourwall &
 
 if [ `pidof urxvtd | wc -l` -lt 1 ] ; then
