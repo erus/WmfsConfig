@@ -4,7 +4,7 @@ ${execi 20 ~/.config/wmfs/updates_pacman.sh > /dev/null 2>&1}
 Majs: ${tail /tmp/.pac 1} | \
 Mails: ${tail /tmp/.mails 1} | \
 Vol: ${if_mixer_mute}M${else}${exec amixer get Master | sed -n 's|.*\[\([0-9]*\)\%.*|\1%|pg'}${endif} | \
-Cpu: $cpu% - ${execi 5 sensors | sed -n 's/.*ore.*0.*+\(.*\)..°C.*(.*/\1°/pg'} | Serv: ${execi 5 ssh compaq "sensors | sed -n 's/.*0.*\([0-9][0-9]\).*/\1°/pg;'"} | \
+Cpu: $cpu% - ${execi 5 sensors | sed -n 's/.*ore.*0.*+\(.*\)..°C.*(.*/\1°/pg'} | \
 Ram: $mem | \
 Bat: ${execi 2 ~/.scripts/battery_short.sh} | \
 Up: $uptime_short - ${time %a %d %b %Y - %H:%M:%S}
