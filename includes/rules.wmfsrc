@@ -7,7 +7,10 @@
 #           max      = true
 #       [/rule]
        [rule]
-           instance = "Navigator"
+           instance = "Skype"
+           ignoretags = true
+       [/rule]
+       [rule]
            role     = "browser"
            screen   = 1
            tag      = 2
@@ -24,6 +27,7 @@
            role     = "vlc-video"
            screen   = 1
            free     = true
+           center   = true
        [/rule]
        [rule]
            instance = "VisualBoyAdvance"

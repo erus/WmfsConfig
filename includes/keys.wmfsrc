@@ -34,11 +34,13 @@
     [key] mod = { "Control", "Alt" }  key = "Down"                 func = "set_nmaster"      cmd = "-1"                               [/key]
     #Launcher
     [key] mod = { "Mod4" }            key = "a"                    func = "menu"             cmd = "rootmenu"                         [/key]
-    [key] mod = { "Mod4" }            key = "r"                    func = "launcher"         cmd = "launcher_exec"                    [/key]
+#   [key] mod = { "Mod4" }            key = "r"                    func = "launcher"         cmd = "launcher_exec"                    [/key]
 #   [key] mod = { "Mod4" }            key = "r"                    func = "spawn"            cmd = "bashrun"                          [/key]
+    [key] mod = { "Mod4" }            key = "r"                    func = "spawn"            cmd = "myrun"                            [/key]
     [key] mod = { "Mod4" }            key = "p"                    func = "launcher"         cmd = "launcher_term"                    [/key]
-    [key] mod = { "Mod4" }            key = "s"                    func = "launcher"         cmd = "launcher_ssh"                     [/key]
-#   [key] mod = { "Mod4" }            key = "s"                    func = "spawn"            cmd = "urxvtc -T Irc -e ssh foo@bar"     [/key]
+#   [key] mod = { "Mod4" }            key = "s"                    func = "launcher"         cmd = "launcher_ssh"                     [/key]
+#   [key] mod = { "Mod4" }            key = "s"                    func = "spawn"            cmd = "urxvtc -bg '#444444' -T Irc -e ssh erus@compaq" [/key]
+    [key] mod = { "Mod4" }            key = "s"                    func = "spawn"            cmd = "urxvtc -T Irc -e ssh erus@compaq" [/key]
     #MPD control
     [key]                             key = "XF86AudioPlay"        func = "spawn"            cmd = "mpc -q toggle"                    [/key]
     [key]                             key = "XF86AudioStop"        func = "spawn"            cmd = "mpc -q stop"                      [/key]
@@ -52,7 +54,8 @@
     #programmes
     [key]                             key = "Print"                func = "spawn"            cmd = "koin.sh"                          [/key]
     [key] mod = { "Mod4" }            key = "Return"               func = "spawn"            cmd = "urxvtc"                           [/key]
-    [key] mod = { "Mod4" }            key = "n"                    func = "spawn"            cmd = "firefox"                          [/key]
+#   [key] mod = { "Mod4" }            key = "n"                    func = "spawn"            cmd = "firefox"                          [/key]
+    [key] mod = { "Mod4" }            key = "n"                    func = "spawn"            cmd = "chromium-dev"                     [/key]
     [key] mod = { "Mod4" }            key = "m"                    func = "spawn"            cmd = "urxvtc -T music -e ncmpcpp"       [/key]
     [key] mod = { "Mod4" }            key = "l"                    func = "spawn"            cmd = "lockscreen.sh"                    [/key]
     [key]                             key = "XF86Standby"          func = "spawn"            cmd = "lockscreen.sh && sudo pm-suspend" [/key] 
@@ -70,6 +73,7 @@
     [key] mod = { "Mod4" }            key = "egrave"               func = "tag"              cmd = "7"                                [/key]
     [key] mod = { "Mod4" }            key = "underscore"           func = "tag"              cmd = "8"                                [/key]
     [key] mod = { "Mod4" }            key = "ccedilla"             func = "tag"              cmd = "9"                                [/key]
+    [key] mod = { "Mod4" }            key = "agrave"               func = "tag"              cmd = "10"                               [/key]
     # Transfert selected client to x.
     [key] mod = { "Mod4", "Shift" }   key = "ampersand"            func = "tag_transfert"    cmd ="1"                                 [/key]
     [key] mod = { "Mod4", "Shift" }   key = "eacute"               func = "tag_transfert"    cmd ="2"                                 [/key]
@@ -80,4 +84,5 @@
     [key] mod = { "Mod4", "Shift" }   key = "egrave"               func = "tag_transfert"    cmd ="7"                                 [/key]
     [key] mod = { "Mod4", "Shift" }   key = "underscore"           func = "tag_transfert"    cmd ="8"                                 [/key]
     [key] mod = { "Mod4", "Shift" }   key = "ccedilla"             func = "tag_transfert"    cmd ="9"                                 [/key]
+    [key] mod = { "Mod4", "Shift" }   key = "agrave"               func = "tag_transfert"    cmd ="10"                                [/key]
 [/keys]
